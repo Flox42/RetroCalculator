@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-En-g7V">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="bWY-HP-ReC">
+                                <rect key="frame" x="0.0" y="457" width="600" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="ggz-Dd-qkI"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KbT-FC-vtO">
+                                <rect key="frame" x="40" y="20" width="520" height="380"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="LhI-6P-7E4">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="79"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="iaF-b3-NCQ">
+                                        <rect key="frame" x="0.0" y="99" width="520" height="281"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="KbT-FC-vtO" secondAttribute="bottom" constant="200" id="02b-Xe-Ger"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KbT-FC-vtO" secondAttribute="trailing" constant="20" id="9Q2-bH-FSU"/>
+                            <constraint firstAttribute="trailing" secondItem="hpo-En-g7V" secondAttribute="trailing" id="BN7-fA-joE"/>
+                            <constraint firstAttribute="trailing" secondItem="bWY-HP-ReC" secondAttribute="trailing" id="LsU-g8-hIt"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bWY-HP-ReC" secondAttribute="bottom" id="aTK-nE-GGc"/>
+                            <constraint firstItem="KbT-FC-vtO" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="akD-ZS-wls"/>
+                            <constraint firstItem="hpo-En-g7V" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="hZw-mr-GPN"/>
+                            <constraint firstItem="hpo-En-g7V" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ksK-RD-mtF"/>
+                            <constraint firstItem="bWY-HP-ReC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lpJ-e2-ney"/>
+                            <constraint firstItem="KbT-FC-vtO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="nqj-eW-abo"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hpo-En-g7V" secondAttribute="bottom" id="v0c-yw-b2a"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +60,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Retro-Calc" width="755" height="111"/>
+        <image name="launchbg" width="1433" height="957"/>
+        <image name="launchground" width="999" height="225"/>
+        <image name="robot" width="786" height="402"/>
+    </resources>
 </document>
